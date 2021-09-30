@@ -1,5 +1,4 @@
 // todays date
-var savedItems = [];
 
 // Sets the current date and time via moment
 var today = moment();
@@ -27,20 +26,20 @@ $("textarea").each(function () {
     }
 })
 
-
-var retrieveItems = JSON.parse(localStorage.getItem("savedItems"));
-console.log(retrieveItems)
+var savedItems = JSON.parse(localStorage.getItem("savedItems")) || [];
 
 
 init();
 function init () {
     $(".description").each(function(){
         var hour = $(this).attr('name');
-        for (let i = 0; i < retrieveItems.length; i++) {
-            if (hour == retrieveItems[i].currentHour){
-                $(this).text(retrieveItems[i].newTask)
+        if (savedItems != null) {
+            for (let i = 0; i < savedItems.length; i++) {
+                if (hour == savedItems[i].currentHour){
+                    $(this).text(savedItems[i].newTask)
+                }
             }
-        }
+        } else return;
     })
 }
 
