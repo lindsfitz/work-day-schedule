@@ -1,11 +1,11 @@
 // todays date
 
 // Sets the current date and time via moment
-var today = moment();
-$("#currentDay").text(today.format("MMMM Do, YYYY HH:mm"))
+var today = moment().format("MMMM Do, YYYY H:mm");
+$("#currentDay").text(today)
 
 var updatedTime = setInterval(function() {
-    $("#date-time").text(today);
+    $("#currentDay").text(today);
 }, 1000);
 
 
@@ -21,7 +21,7 @@ $("textarea").each(function () {
         $(this).addClass("future")
     }
     
-    if (name === todayCheck) {
+    if (name == todayCheck) {
         $(this).addClass("present")
     }
 })
@@ -62,5 +62,10 @@ function saveItem() {
 //when you click the save button within each time block, it will call the saveItem function 
 $(".saveBtn").each(function(){
     $(this).click(saveItem)
+})
+
+$("#reset").click(function() {
+    localStorage.removeItem("savedItems");
+    $('.description').text('')
 })
 

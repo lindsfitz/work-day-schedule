@@ -5,6 +5,7 @@
   --mediumbl: #B7D1D3;
   --darkbl: #A6C3CE;
   --tan: #FAF0E6;
+  --pale: #F3F7F5;
 
 }
 
@@ -12,6 +13,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 1;
+    background-color: var(--pale);
   }
   
   textarea {
@@ -43,11 +45,11 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
+    border-top: 1px solid var(--pale);
   }
   
   .hour {
-    background-color: #ffffff;
+    background-color: var(--pale);
     color: #000000;
     border-top: 1px dashed #000000;
     padding: 20px;
@@ -59,8 +61,8 @@ body {
   }
   
   .present {
-    background-color: var(--mediumbl);
-    color: white;
+    background-color: var(--tan);
+    color: black;
   }
   
   .future {
@@ -72,13 +74,23 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: var(--lightbl);
+    background-color: var(--mediumbl);
     color: white;
   }
   
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+  }
+
+  #resetBtn {
+    text-align: center;
+  }
+
+  #reset {
+    border-radius: 10px;
+    padding:10px;
+    background-color: var(--lightbl);
   }
 
   footer {
