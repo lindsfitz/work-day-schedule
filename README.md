@@ -37,6 +37,11 @@ THEN the saved events persist
 
 # Application Mock-Up
 
+Photos of the appearance of the application: 
+
+<img src="./assets/images/mockuptop.jpg">
+<img src="./assets/images/mockupbottom.jpg">
+
 
 
 # Link to Deployed Application 
