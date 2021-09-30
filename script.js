@@ -39,7 +39,9 @@ function init () {
                     $(this).text(savedItems[i].newTask)
                 }
             }
-        } else return;
+        } else if (savedItems === null) {
+            return;
+        }
     })
 }
 
