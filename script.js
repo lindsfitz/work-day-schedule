@@ -31,7 +31,7 @@ $("textarea").each(function () {
 var retrieveItems = JSON.parse(localStorage.getItem("savedItems"));
 var retrieveKeys = Object.keys(retrieveItems);
 
-init();
+
 
 function init () {
     $(".description").each(function(){
